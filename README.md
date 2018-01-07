@@ -1,9 +1,9 @@
 # TodolistApp
 
-##Description
+## Description
 Add and remove items from a shared to-do list
 
-##Technologies
+## Technologies
 - HTML
 - Bootstrap
 - JavaScript
@@ -11,5 +11,5 @@ Add and remove items from a shared to-do list
 - MongoDB
 - Socket.io
 
-##Example
+## Example
 ![screenshot](https://img15.hostingpics.net/pics/447660TodolistApp.png)
