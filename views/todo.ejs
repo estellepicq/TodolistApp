@@ -3,14 +3,15 @@
 
 <head>
     <meta charset="utf-8">
-    <title>TodolistApp</title>
+    <title>Todolist App</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="icon" type="image/png" href="favicon.png" />
 </head>
 
 <body>
-  <div class="container">
+  <div class="container-fluid">
     <header class="page-header">
-	     <h1>TodolistApp</h1>
+	     <h1>Welcome on Todolist App</h1>
     </header>
 
     <div class="row col-lg-6">
@@ -24,9 +25,9 @@
 
       <div class="row col-lg-5 col-lg-offset-1">
         <form action="/todo/ajouter/" method="post" class="well">
-          <input type="text" name="newtodo" id="newtodo" placeholder="Add an item" class="form-control" autofocus />
+          <input type="text" name="newtodo" id="newtodo" placeholder="Add an item" class="form-control input-lg" autofocus />
           </br>
-          <input type="submit" value="Add" id="bouton" class="btn btn-primary btn-md"/>
+          <input type="submit" value="Add" id="bouton" class="btn btn-primary btn-lg"/>
         </form>
       </div>
 
