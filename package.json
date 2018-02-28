@@ -1,6 +1,6 @@
 {
     "name": "TodolistApp",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "dependencies": {
         "body-parser": "1.18.2",
         "cookie-session": "2.0.0-beta.3",
