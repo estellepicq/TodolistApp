@@ -18,13 +18,13 @@
       <ul id="liste" class="well list-group">
           <% todolist.forEach(function(todo, index) { %>
             <li class="list-group-item"><a class="btn btn-warning btn-xs active" role="button"
-               href="/todolist/supprimer/<%= index %>">✘</a> <%= todo %></li>
+               href="/supprimer/<%= index %>">✘</a> <%= todo %></li>
           <% }); %>
       </ul>
     </div>
 
       <div class="row col-lg-5 col-lg-offset-1">
-        <form action="/todolist/ajouter/" method="post" class="well">
+        <form action="/ajouter/" method="post" class="well">
           <input type="text" name="newtodo" id="newtodo" placeholder="Add an item" class="form-control input-lg" autofocus />
           </br>
           <input type="submit" value="Add" id="bouton" class="btn btn-primary btn-lg"/>

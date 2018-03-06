@@ -38,12 +38,12 @@ app.use(serveStatic(__dirname + '/'));
 app.use(serveStatic(__dirname + '/public/'));
 
 /* On /todolist */
-app.get('/todolist', function(req, res) {
+app.get('/', function(req, res) {
     res.render('index.ejs', {todolist: todolistArray});
 });
 
 /* On /ajouter */
-app.post('/todolist/ajouter/', urlencodedParser, function(req, res) {
+app.post('/ajouter/', urlencodedParser, function(req, res) {
     if (req.body.newtodo != '') {
         //We insert the new todo into todolistArray
         todolistArray.push(req.body.newtodo);
@@ -64,11 +64,11 @@ app.post('/todolist/ajouter/', urlencodedParser, function(req, res) {
       socket.broadcast.emit('send newtodo', {newtodolist: todolistArray});
     });
 
-    res.redirect('/todolist');
+    res.redirect('/');
 });
 
 /* On /supprimer/:index */
-app.get('/todolist/supprimer/:index', function(req, res) {
+app.get('/supprimer/:index', function(req, res) {
     var itemToRemove = todolistArray[req.params.index];
     //We remove the selected item from todolistArray
     todolistArray.splice(req.params.index, 1);
@@ -88,12 +88,12 @@ app.get('/todolist/supprimer/:index', function(req, res) {
       socket.broadcast.emit('send newtodo', {newtodolist: todolistArray});
     });
 
-    res.redirect('/todolist');
+    res.redirect('/');
 });
 
 /* En cas d'erreur d'URL on redirige vers /todolist */
 app.use(function(req, res, next) {
-    res.redirect('/todolist');
+    res.redirect('/');
 });
 
 server.listen(port);
